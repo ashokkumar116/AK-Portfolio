@@ -1069,11 +1069,12 @@
   /* Hero headline */
   .text-hero {
     font-family: var(--font-heading);
-    font-size: clamp(2.25rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: var(--font-weight-extrabold);
     line-height: 1.1;
     letter-spacing: -0.03em;
     color: var(--color-ink);
+    text-align: center;
   }
 
   /* Copper gradient text */
@@ -1119,10 +1120,11 @@
 
   /* Large body copy */
   .text-lead {
-    font-size: clamp(var(--font-size-md), 1.75vw, var(--font-size-xl));
+    font-size: clamp(var(--font-size-sm), 0.75vw, var(--font-size-md));
     color: var(--color-ink-muted);
     line-height: var(--line-height-relaxed);
-    max-width: 60ch;
+    /* max-width: 60ch; */
+    text-align: center;
   }
 
   /* Muted caption */
@@ -1153,14 +1155,16 @@
      ========================================================== */
 
   .hero-label {
-    display: inline-flex;
+    display:flex;
     align-items: center;
+    justify-content: center;
     gap: 0.625rem;
     font-family: var(--font-mono);
     font-size: var(--font-size-xs);
     color: var(--color-ink-muted);
     letter-spacing: var(--letter-spacing-wide);
     margin-bottom: 1.75rem;
+    text-align: center;
   }
   .hero-label::before {
     content: '';

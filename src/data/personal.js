@@ -13,11 +13,11 @@ export const personal = {
   location: "Ariyalur, India",
 
   /** Hero section tagline — the main H1. Use \n for line breaks if needed */
-  tagline: "I build the digital\ninfrastructure your\nbusiness runs on.",
+  tagline: "I build the digital infrastructure your business runs on.",
 
   /** Hero subheadline — 1-2 sentences max */
   subHeadline:
-    "Custom websites, internal tools, and automation systems for marketing agencies and growing Indian businesses.",
+    "Custom websites, internal tools, and automation systems for growing businesses.",
 
   /** 2–3 paragraph bio for the About section. Each string = one paragraph */
   bio: [

@@ -68,7 +68,7 @@ export function Hero() {
       }}
     >
       <div className="container-main" style={{ position: "relative", zIndex: 2 }}>
-        <div style={{ maxWidth: "720px" }}>
+        <div>
           <div ref={labelRef} className="hero-label">
             <span>{personal.role}</span>
             <span style={{ color: "var(--color-ink-subtle)" }}>·</span>
@@ -76,22 +76,17 @@ export function Hero() {
           </div>
 
           <h1 ref={h1Ref} className="text-hero" style={{ marginBottom: "1.5rem" }}>
-            {taglineParts.map((part, i) => (
-              <span key={i}>
-                {part}
-                {i < taglineParts.length - 1 && <br />}
-              </span>
-            ))}
+            {personal.tagline}
           </h1>
 
           <p ref={subRef} className="text-lead" style={{ marginBottom: "2.5rem" }}>
             {personal.subHeadline}
           </p>
 
-          <div ref={btnRef} style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+          <div ref={btnRef} className="flex items-center justify-center gap-5">
             <Button
               variant="primary"
-              size="lg"
+              size="md"
               href={personal.heroCTA.primary.href}
               aria-label={personal.heroCTA.primary.label}
             >
@@ -99,7 +94,7 @@ export function Hero() {
             </Button>
             <Button
               variant="secondary"
-              size="lg"
+              size="md"
               href={personal.heroCTA.secondary.href}
               aria-label={personal.heroCTA.secondary.label}
             >
