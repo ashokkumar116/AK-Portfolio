@@ -7,6 +7,7 @@ import {
   MessageSquare, IndianRupee, Send, CheckCircle2, 
   AlertCircle, ChevronDown, Briefcase 
 } from "lucide-react";
+import scrollToTop from "../helpers/scrollToTop";
 
 /**
  * CustomSelect Component — Styled to match the Slate & Copper theme
@@ -142,6 +143,7 @@ export default function Booking() {
             preferred_time: "morning",
             notes: ""
           });
+          scrollToTop();
         },
         (error) => {
           console.error("FAILED...", error.text);
