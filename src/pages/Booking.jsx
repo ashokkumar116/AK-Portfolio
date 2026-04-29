@@ -295,7 +295,7 @@ export default function Booking() {
                 onChange={(val) => handleChange("service_needed", val)}
                 options={[
                   { label: "Full Infrastructure Audit", value: "Full Audit" },
-                  { label: "Custom Web Application", value: "Web Development" },
+                  { label: "Custom Website", value: "Web Development" },
                   { label: "Workflow Automation", value: "Automation" },
                   { label: "Custom Internal Tools", value: "Internal Tools" }
                 ]}
@@ -341,9 +341,9 @@ export default function Booking() {
                 value={formData.preferred_time}
                 onChange={(val) => handleChange("preferred_time", val)}
                 options={[
-                  { label: "Morning (10 AM - 1 PM)", value: "morning" },
-                  { label: "Afternoon (2 PM - 5 PM)", value: "afternoon" },
-                  { label: "Evening (6 PM - 9 PM)", value: "evening" }
+                  { label: "Morning (8 AM - 12 PM)", value: "morning" },
+                  { label: "Afternoon (1 PM - 5 PM)", value: "afternoon" },
+                  { label: "Evening (5 PM - 9 PM)", value: "evening" }
                 ]}
               />
 
@@ -353,11 +353,11 @@ export default function Booking() {
             <div className="input-group mt-8">
               <label htmlFor="notes" className="input-label">Brief about your project</label>
               <div className="input-with-icon">
-                <MessageSquare className="input-icon-left w-4 h-4 text-copper" style={{ top: '1.25rem', transform: 'none' }} />
+                <MessageSquare className="input-icon-left w-4 h-4  text-copper" style={{ top: '1.25rem', transform: 'none' }} />
                 <textarea 
                   name="notes" 
                   id="notes" 
-                  className="textarea" 
+                  className="textarea px-10" 
                   placeholder="Share any specific challenges or goals you have..."
                   value={formData.notes}
                   onChange={(e) => handleChange("notes", e.target.value)}
@@ -370,12 +370,12 @@ export default function Booking() {
               <button 
                 type="submit" 
                 disabled={isSubmitting} 
-                className="btn btn-xl btn-primary w-full shadow-copper-glow"
+                className="btn btn-xl max-md:text-xs btn-primary w-full shadow-copper-glow"
               >
                 {isSubmitting ? 'Processing Details...' : (
                   <>
                     Confirm Booking Request
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 max-md:w-2 max-md:h-2" />
                   </>
                 )}
               </button>
