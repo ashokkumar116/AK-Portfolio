@@ -1,15 +1,16 @@
 import { personal } from "../../data/personal";
 import { Globe, Code, Link as LinkIcon, AtSign } from "lucide-react";
+import {FaInstagram, FaLinkedin, FaGithub, FaTwitter} from "react-icons/fa"
 
 /**
  * Maps social platform keys to Lucide icons (brand icons removed from lucide).
  * Using generic alternatives that convey the meaning.
  */
 const SOCIAL_ICONS = {
-  instagram: AtSign,
-  github: Code,
-  linkedin: LinkIcon,
-  twitter: Globe,
+  instagram: FaInstagram,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  twitter: FaTwitter,
 };
 
 /**
@@ -25,7 +26,7 @@ export function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <p className="footer-copy">
-          © {year} {personal.name}. Built from scratch with React & purpose.
+          © {year} {personal.name}.
         </p>
 
         {activeSocials.length > 0 && (

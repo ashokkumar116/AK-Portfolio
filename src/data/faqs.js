@@ -7,13 +7,13 @@ export const faqs = [
     id: "f1",
     question: "Do you work with businesses outside Tamil Nadu / Chennai?",
     answer:
-      "Yes. 100% of my work is remote-first. I've built systems for clients across Mumbai, Bangalore, and Delhi. Location has never been a limitation.",
+      "Yes. 100% of my work is remote-first.",
   },
   {
     id: "f2",
     question: "What is your minimum project size?",
     answer:
-      "Website projects start at ₹10,000. Internal tools and dashboards start at ₹35,000. I don't take projects below these thresholds — they don't give me enough space to build something worth using.",
+      "Website projects start at ₹10,000. Internal tools and dashboards start at ₹35,000.",
   },
   {
     id: "f3",

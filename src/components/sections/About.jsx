@@ -1,13 +1,15 @@
 import { personal } from "../../data/personal";
 import { ScrollReveal } from "../ui/ScrollReveal";
 import { SectionHeader } from "../ui/SectionHeader";
-import { Globe, Code, Link as LinkIcon, AtSign } from "lucide-react";
+// import { Globe, Code, Link as LinkIcon } from "lucide-react";
+import { FaInstagram,FaGithub,FaLinkedin,FaTwitter } from "react-icons/fa";
+import ashok from '../../assets/Ashokkumar.jpeg'
 
 const SOCIAL_ICONS = {
-  instagram: AtSign,
-  github: Code,
-  linkedin: LinkIcon,
-  twitter: Globe,
+  instagram: FaInstagram,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  twitter:FaTwitter ,
 };
 
 export function About() {
@@ -21,7 +23,8 @@ export function About() {
         <div className="grid-2" style={{ alignItems: "start" }}>
           <ScrollReveal>
             <div className="about-avatar" style={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontFamily: "var(--font-display)", fontSize: "var(--font-size-5xl)", fontWeight: 300, color: "var(--color-copper)", position: "relative", zIndex: 1 }}>{initials}</span>
+              {/* <span style={{ fontFamily: "var(--font-display)", fontSize: "var(--font-size-5xl)", fontWeight: 300, color: "var(--color-copper)", position: "relative", zIndex: 1 }}>{initials}</span> */}
+              <img src={ashok} alt="Avatar" className="h-full w-full object-cover object-top " />
             </div>
           </ScrollReveal>
 

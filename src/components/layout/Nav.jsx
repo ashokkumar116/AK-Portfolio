@@ -1,27 +1,28 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { Link, useLocation } from "react-router-dom";
 import { personal } from "../../data/personal";
 
 const NAV_ITEMS = [
-  { label: "Work", href: "#demos" },
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/#services" },
+  { label: "Process", href: "/#process" },
+  { label: "About", href: "/#about" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
-/**
- * Nav — Fixed top navigation with scroll-aware active states and mobile drawer.
- */
 export function Nav() {
   const [activeId, setActiveId] = useState("");
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { pathname } = useLocation();
   const drawerRef = useRef(null);
   const overlayRef = useRef(null);
 
-  /* IntersectionObserver for active nav state */
+  /* IntersectionObserver for active nav state - only on home page */
   useEffect(() => {
-    const sectionIds = NAV_ITEMS.map((item) => item.href.replace("#", ""));
+    if (pathname !== "/") return;
+
+    const sectionIds = ["hero", "services", "process", "about", "faq"];
     const observers = [];
 
     sectionIds.forEach((id) => {
@@ -41,7 +42,7 @@ export function Nav() {
     });
 
     return () => observers.forEach((obs) => obs.disconnect());
-  }, []);
+  }, [pathname]);
 
   /* Mobile drawer GSAP animation */
   useEffect(() => {
@@ -62,7 +63,6 @@ export function Nav() {
     setMobileOpen(false);
   };
 
-  /* Split name for copper accent on last word */
   const nameParts = personal.name.split(" ");
   const firstName = nameParts.slice(0, -1).join(" ");
   const lastName = nameParts[nameParts.length - 1];
@@ -70,22 +70,36 @@ export function Nav() {
   return (
     <nav className="nav" aria-label="Main navigation">
       <div className="nav-inner">
-        <a href="#hero" className="nav-logo" aria-label="Go to top">
+        <Link to="/" className="nav-logo" aria-label="Go to top">
           {firstName} <span>{lastName}</span>
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <ul className="nav-links">
           {NAV_ITEMS.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                className={`nav-link ${activeId === item.href.replace("#", "") ? "active" : ""}`}
-              >
-                {item.label}
-              </a>
+            <li key={item.label}>
+              {item.href.startsWith("/#") ? (
+                <a
+                  href={item.href}
+                  className={`nav-link ${activeId === item.href.replace("/#", "") ? "active" : ""}`}
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  to={item.href}
+                  className={`nav-link ${pathname === item.href ? "active" : ""}`}
+                >
+                  {item.label}
+                </Link>
+              )}
             </li>
           ))}
+          <li>
+            <Link to="/book-audit" className="btn btn-sm btn-primary">
+              Book Audit
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile burger */}
@@ -112,6 +126,7 @@ export function Nav() {
       {/* Mobile drawer */}
       <div
         ref={drawerRef}
+        className="mobile-drawer"
         style={{
           position: "fixed",
           top: 0,
@@ -130,6 +145,7 @@ export function Nav() {
       >
         <button
           onClick={() => setMobileOpen(false)}
+          className="drawer-close"
           aria-label="Close menu"
           style={{
             position: "absolute",
@@ -145,20 +161,43 @@ export function Nav() {
           ✕
         </button>
         {NAV_ITEMS.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            onClick={handleLinkClick}
-            className="nav-link"
-            style={{
-              fontSize: "var(--font-size-lg)",
-              padding: "0.75rem 0",
-              borderBottom: "var(--border-dim)",
-            }}
-          >
-            {item.label}
-          </a>
+          item.href.startsWith("/#") ? (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={handleLinkClick}
+              className="nav-link"
+              style={{
+                fontSize: "var(--font-size-lg)",
+                padding: "0.75rem 0",
+                borderBottom: "var(--border-dim)",
+              }}
+            >
+              {item.label}
+            </a>
+          ) : (
+            <Link
+              key={item.label}
+              to={item.href}
+              onClick={handleLinkClick}
+              className="nav-link"
+              style={{
+                fontSize: "var(--font-size-lg)",
+                padding: "0.75rem 0",
+                borderBottom: "var(--border-dim)",
+              }}
+            >
+              {item.label}
+            </Link>
+          )
         ))}
+        <Link
+          to="/book-audit"
+          onClick={handleLinkClick}
+          className="btn btn-primary mt-4"
+        >
+          Book Audit
+        </Link>
       </div>
     </nav>
   );

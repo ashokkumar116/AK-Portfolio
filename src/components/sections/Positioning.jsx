@@ -42,12 +42,12 @@ export function Positioning() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.45}>
-          <p style={{ maxWidth: "55ch", marginInline: "auto" }}>
+          {/* <p style={{ maxWidth: "55ch", marginInline: "auto" }}>
             I work primarily with marketing agencies and growing Indian SMEs —
             businesses doing ₹20L–₹2Cr annually — who need custom websites,
             internal dashboards, and automation systems that actually work the
             way they work.
-          </p>
+          </p> */}
         </ScrollReveal>
       </div>
     </section>

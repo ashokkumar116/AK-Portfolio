@@ -51,7 +51,7 @@ export function Hero() {
   }, []);
 
   /* Split tagline on \n */
-  const taglineParts = personal.tagline.split("\n");
+  // const taglineParts = personal.tagline.split("\n");
 
   return (
     <section
@@ -71,8 +71,8 @@ export function Hero() {
         <div>
           <div ref={labelRef} className="hero-label">
             <span>{personal.role}</span>
-            <span style={{ color: "var(--color-ink-subtle)" }}>·</span>
-            <span>{personal.location}</span>
+            {/* <span style={{ color: "var(--color-ink-subtle)" }}>·</span> */}
+            {/* <span>{personal.location}</span> */}
           </div>
 
           <h1 ref={h1Ref} className="text-hero" style={{ marginBottom: "1.5rem" }}>
@@ -83,7 +83,7 @@ export function Hero() {
             {personal.subHeadline}
           </p>
 
-          <div ref={btnRef} className="flex items-center justify-center gap-5">
+          <div ref={btnRef} className="flex items-center justify-center gap-5 max-md:flex-col mb-5">
             <Button
               variant="primary"
               size="md"
@@ -107,7 +107,7 @@ export function Hero() {
       {/* Scroll indicator */}
       <div
         ref={scrollRef}
-        className="scroll-indicator"
+        className="scroll-indicator" 
         style={{
           position: "absolute",
           bottom: "2rem",

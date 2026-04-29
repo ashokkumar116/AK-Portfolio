@@ -1,39 +1,29 @@
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Nav } from "./components/layout/Nav";
 import { Footer } from "./components/layout/Footer";
-import { Hero } from "./components/sections/Hero";
-import { Positioning } from "./components/sections/Positioning";
-import { Problem } from "./components/sections/Problem";
-import { Services } from "./components/sections/Services";
-import { DemoTools } from "./components/sections/DemoTools";
-import { CaseStudies } from "./components/sections/CaseStudies";
-import { Process } from "./components/sections/Process";
-import { TechStack } from "./components/sections/TechStack";
-import { About } from "./components/sections/About";
-import { Testimonials } from "./components/sections/Testimonials";
-import { Stats } from "./components/sections/Stats";
-import { FAQ } from "./components/sections/FAQ";
-import { CTA } from "./components/sections/CTA";
+import Home from "./pages/Home";
+import Booking from "./pages/Booking";
+
+// Scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   return (
-    <>
+    <Router>
+      <ScrollToTop />
       <Nav />
-      <main>
-        <Hero />
-        <Positioning />
-        <Problem />
-        <Services />
-        <DemoTools />
-        <CaseStudies />
-        <Process />
-        <TechStack />
-        <About />
-        <Testimonials />
-        <Stats />
-        <FAQ />
-        <CTA />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/book-audit" element={<Booking />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   );
 }

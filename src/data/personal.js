@@ -21,23 +21,23 @@ export const personal = {
 
   /** 2–3 paragraph bio for the About section. Each string = one paragraph */
   bio: [
-    "I'm Ashok Kumar — a full-stack developer from Tamil Nadu building digital systems for Indian businesses.",
+    "I'm Ashok Kumar — a full-stack developer from Tamil Nadu building digital systems for growing businesses.",
     "I started building software to solve real problems, not to win design awards. That orientation shapes everything I build: the measure of success is whether it works for the person using it.",
-    "Right now I'm building KuBros with my brother — a Digital Systems & Automation Company for Indian agencies and SMEs. This portfolio is where I show the work we're capable of.",
+    "Right now I'm building KuBros with my brother — a Digital Systems & Automation Company for agencies and SMEs. This portfolio is where I show the work we're capable of.",
   ],
 
   /** CTA text and link for the primary hero button */
   heroCTA: {
-    primary:   { label: "See My Work",       href: "#demos" },
-    secondary: { label: "Book a Free Audit", href: "#contact" },
+    primary: { label: "Book a Free Audit", href: "/book-audit" },
+    secondary: { label: "See What I Build", href: "/#services" },
   },
 
   /** Social links — set href to null to hide */
   socials: {
-    instagram: "https://instagram.com/ashokkubros",
-    github:    "https://github.com/yourusername",
-    linkedin:  null,
-    twitter:   null,
+    instagram: "https://www.instagram.com/ashok.builds",
+    github: "https://github.com/ashokkumar116",
+    linkedin: "https://www.linkedin.com/in/ashokkumar116",
+    twitter: null,
   },
 
   /** Contact / booking details */

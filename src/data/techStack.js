@@ -6,19 +6,19 @@
 export const techStack = [
   {
     category: "Frontend",
-    items: ["React", "Tailwind CSS", "Zustand", "GSAP", "Framer Motion"],
+    items: ["React", "Tailwind CSS", "GSAP", "Framer Motion"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Express", "REST APIs", "JWT Authentication"],
+    items: ["Node.js", "Express.js"],
   },
   {
     category: "Database",
-    items: ["PostgreSQL", "MongoDB", "Neon", "Drizzle ORM"],
+    items: ["PostgreSQL", "MongoDB", "MySQL"],
   },
   {
     category: "Infrastructure",
-    items: ["Netlify", "Render", "Cloudinary", "Zoho Mail SMTP"],
+    items: ["AWS", "Docker", "Netlify", "Render", "Cloudinary", "Zoho Mail SMTP"],
   },
   {
     category: "Integrations",
@@ -26,7 +26,7 @@ export const techStack = [
   },
   {
     category: "Currently Exploring",
-    items: ["AWS EC2", "Docker", "Redis", "Next.js"],
+    items: [ "Redis", "Next.js"],
     /** Set muted: true to render these chips in the .stack-chip-exploring style */
     muted: true,
   },
