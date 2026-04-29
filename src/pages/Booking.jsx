@@ -80,6 +80,7 @@ export default function Booking() {
     user_email: "",
     contact_number: "",
     entity_type: "solopreneur",
+    company_name: "",
     company_size: "1-5",
     service_needed: "Full Audit",
     budget: "50k-1L",
@@ -136,6 +137,7 @@ export default function Booking() {
             user_email: "",
             contact_number: "",
             entity_type: "solopreneur",
+            company_name: "",
             company_size: "1-5",
             service_needed: "Full Audit",
             budget: "50k-1L",
@@ -269,23 +271,41 @@ export default function Booking() {
                 ]}
               />
 
-              {/* Company Size - Custom Select (Conditional) */}
-              {formData.entity_type === "company" && (
-                <div className="animate-item">
-                  <CustomSelect 
-                    label="Company Size"
-                    name="company_size"
-                    icon={User}
-                    value={formData.company_size}
-                    onChange={(val) => handleChange("company_size", val)}
-                    options={[
-                      { label: "1-5 Employees", value: "1-5" },
-                      { label: "6-20 Employees", value: "6-20" },
-                      { label: "21-50 Employees", value: "21-50" },
-                      { label: "50+ Employees", value: "50+" }
-                    ]}
-                  />
-                </div>
+              {/* Company Name & Size - Conditional */}
+              {(formData.entity_type === "company" || formData.entity_type === "startup") && (
+                <>
+                  <div className="input-group animate-item">
+                    <label htmlFor="company_name" className="input-label">Company Name</label>
+                    <div className="input-with-icon">
+                      <Building2 className="input-icon-left w-4 h-4 text-copper" />
+                      <input 
+                        type="text" 
+                        name="company_name" 
+                        id="company_name" 
+                        className="input" 
+                        placeholder="Enter your company name" 
+                        value={formData.company_name}
+                        onChange={(e) => handleChange("company_name", e.target.value)}
+                        required 
+                      />
+                    </div>
+                  </div>
+                  <div className="animate-item">
+                    <CustomSelect 
+                      label="Company Size"
+                      name="company_size"
+                      icon={User}
+                      value={formData.company_size}
+                      onChange={(val) => handleChange("company_size", val)}
+                      options={[
+                        { label: "1-5 Employees", value: "1-5" },
+                        { label: "6-20 Employees", value: "6-20" },
+                        { label: "21-50 Employees", value: "21-50" },
+                        { label: "50+ Employees", value: "50+" }
+                      ]}
+                    />
+                  </div>
+                </>
               )}
 
               {/* Service Needed - Custom Select */}
