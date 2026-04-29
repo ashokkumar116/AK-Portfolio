@@ -19,7 +19,7 @@ export function CTA() {
             </p>
 
             <div className="cta-actions">
-              <Button variant="primary" size="xl" className="max-md:text-sm" href={personal.contact.calendarLink} target="_blank" rel="noopener noreferrer" aria-label="Book a free audit call">
+              <Button variant="primary" size="xl" className="max-md:text-sm" href={"/book-audit"} rel="noopener noreferrer" aria-label="Book a free audit call">
                 Book a Free Audit Call
               </Button>
               {personal.socials.instagram && (
