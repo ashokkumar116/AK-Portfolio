@@ -4,6 +4,8 @@ import { Nav } from "./components/layout/Nav";
 import { Footer } from "./components/layout/Footer";
 import Home from "./pages/Home";
 import Booking from "./pages/Booking";
+import AllTools from "./pages/AllTools";
+import ToolDetail from "./pages/ToolDetail";
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -21,6 +23,8 @@ export default function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/all-tools" element={<AllTools />} />
+        <Route path="/tool/:id" element={<ToolDetail />} />
         <Route path="/book-audit" element={<Booking />} />
       </Routes>
       <Footer />
