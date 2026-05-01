@@ -1,7 +1,6 @@
 import { personal } from "../../data/personal";
 import { ScrollReveal } from "../ui/ScrollReveal";
 import { SectionHeader } from "../ui/SectionHeader";
-// import { Globe, Code, Link as LinkIcon } from "lucide-react";
 import { FaInstagram,FaGithub,FaLinkedin,FaTwitter } from "react-icons/fa";
 import ashok from '../../assets/Ashokkumar.jpeg'
 

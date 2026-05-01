@@ -21,8 +21,10 @@ export const demoTools = [
     previewImage: "https://ashokkumar-p.netlify.app/assets/groundzero-C_p_engk.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/groundzero-C_p_engk.png",
-      "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=2069&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777608640/Screenshot_2026-05-01_094012_zblvlo.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777608709/Screenshot_2026-05-01_094132_uhrzzx.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777608738/Screenshot_2026-05-01_094208_odjwua.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777608887/Screenshot_2026-05-01_094435_b9myvv.png"
     ],
     features: [
       "Real-time issue tracking & mapping",
@@ -32,7 +34,7 @@ export const demoTools = [
       "Location-aware notifications for nearby issues"
     ],
     role: "Lead Full-Stack Developer",
-    timeline: "3 Months",
+    timeline: "2 Months",
     outcome: "Helped community volunteers resolve over 150+ local issues within the first 2 months of beta."
   },
   {
@@ -52,8 +54,10 @@ export const demoTools = [
     previewImage: "https://ashokkumar-p.netlify.app/assets/Quenzy-Fia38LZU.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/Quenzy-Fia38LZU.png",
-      "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=2070&auto=format&fit=crop"
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777608952/Screenshot_2026-05-01_094541_accvxi.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777608992/Screenshot_2026-05-01_094624_qzqcs2.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777609051/Screenshot_2026-05-01_094720_uyc9s2.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777609088/Screenshot_2026-05-01_094759_ffctlm.png"
     ],
     features: [
       "Granular Role-Based Access Control (RBAC)",
@@ -63,7 +67,7 @@ export const demoTools = [
       "Unified admin panel for inventory & sales management"
     ],
     role: "Lead Developer",
-    timeline: "2.5 Months",
+    timeline: "2 Months",
     outcome: "Successfully handled 500+ concurrent users during performance stress tests."
   },
   {
@@ -83,8 +87,9 @@ export const demoTools = [
     previewImage: "https://ashokkumar-p.netlify.app/assets/TaskPilot-DCC86i85.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/TaskPilot-DCC86i85.png",
-      "https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=2064&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777609219/Screenshot_2026-05-01_095008_xityal.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777609246/Screenshot_2026-05-01_095036_rp4ztv.png",
+      "https://res.cloudinary.com/djvgskav0/image/upload/v1777609314/Screenshot_2026-05-01_095144_wvnbkx.png"
     ],
     features: [
       "Hierarchical task assignment with sub-tasking",
@@ -113,9 +118,7 @@ export const demoTools = [
     githubUrl: "https://github.com/ashokkumar116/MovieFlix",
     previewImage: "https://ashokkumar-p.netlify.app/assets/movieflix-DQNeW8Mc.png",
     images: [
-      "https://ashokkumar-p.netlify.app/assets/movieflix-DQNeW8Mc.png",
-      "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=2059&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=2070&auto=format&fit=crop"
+      "https://ashokkumar-p.netlify.app/assets/movieflix-DQNeW8Mc.png"
     ],
     features: [
       "High-performance movie search & filtering",
@@ -125,7 +128,7 @@ export const demoTools = [
       "Biometric authentication support via Appwrite"
     ],
     role: "Mobile App Developer",
-    timeline: "1.5 Months",
+    timeline: "1 Month",
     outcome: "Delivered a native-feel experience with 60 FPS animations on both iOS and Android."
   }
 ];

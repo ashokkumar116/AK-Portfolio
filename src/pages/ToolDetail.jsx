@@ -4,8 +4,8 @@ import { Tag } from "../components/ui/Tag";
 import { ProjectCarousel } from "../components/ui/ProjectCarousel";
 import { ScrollReveal } from "../components/ui/ScrollReveal";
 import { ExternalLink, CheckCircle2, ArrowLeft, Users, Zap, Calendar } from "lucide-react";
-import { FaGithub as Github } from "react-icons/fa";
 import { useEffect } from "react";
+import { FaGithub } from "react-icons/fa";
 
 export default function ToolDetail() {
   const { id } = useParams();
@@ -57,7 +57,7 @@ export default function ToolDetail() {
                 </div>
               </div>
 
-              <div className="flex gap-4">
+              <div className="flex gap-2">
                 {tool.demoUrl && (
                   <a
                     href={tool.demoUrl}
@@ -65,7 +65,7 @@ export default function ToolDetail() {
                     rel="noopener noreferrer"
                     className="btn btn-primary"
                   >
-                    <ExternalLink size={18} />
+                    {/* <ExternalLink className="h-5 w-10" /> */}
                     Live Demo
                   </a>
                 )}
@@ -76,7 +76,7 @@ export default function ToolDetail() {
                     rel="noopener noreferrer"
                     className="btn btn-surface"
                   >
-                    <Github size={18} />
+                    {/* <FaGithub /> */}
                     Source Code
                   </a>
                 )}
@@ -154,10 +154,10 @@ export default function ToolDetail() {
                           <span className="text-ink">{tool.timeline || "4-6 Weeks"}</span>
                         </div>
                       </div>
-                      <div>
+                      {/* <div>
                         <span className="block text-xs uppercase tracking-widest text-ink-subtle mb-1">My Role</span>
                         <span className="text-ink">{tool.role || "Full-Stack Developer"}</span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
                 </div>

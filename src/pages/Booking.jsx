@@ -5,9 +5,11 @@ import { personal } from "../data/personal";
 import { 
   Calendar, Clock, Building2, User, Mail, Phone, 
   MessageSquare, IndianRupee, Send, CheckCircle2, 
-  AlertCircle, ChevronDown, Briefcase 
+  AlertCircle, ChevronDown, Briefcase, 
+  ArrowLeft
 } from "lucide-react";
 import scrollToTop from "../helpers/scrollToTop";
+import { Link } from "react-router-dom";
 
 /**
  * CustomSelect Component — Styled to match the Slate & Copper theme
@@ -157,6 +159,12 @@ export default function Booking() {
 
   return (
     <main ref={contentRef} className="section-full relative overflow-hidden">
+      <div className="container-main">
+      <Link to="/all-tools" className="flex items-center gap-2 text-ink-muted hover:text-copper mb-8 transition-colors">
+              <ArrowLeft size={18} />
+              <span>Back to Home</span>
+            </Link>
+      </div>
       {/* Decorative Background Elements */}
       <div className="bg-glow absolute top-1/4 -left-20 w-96 h-96 bg-copper/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="bg-glow absolute bottom-1/4 -right-20 w-96 h-96 bg-copper/5 blur-[100px] rounded-full pointer-events-none" />
