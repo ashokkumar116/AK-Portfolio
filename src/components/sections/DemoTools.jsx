@@ -12,13 +12,13 @@ export function DemoTools() {
     <section id="demos" className="section-surface">
       <div className="container-main">
         <SectionHeader
-          label="Demo Tools"
+          label="Demo Projects"
           title="Working Software, Not Mockups"
         />
 
         {/* Intro text */}
         <ScrollReveal>
-          <div style={{ maxWidth: "55ch", marginBottom: "3rem" }}>
+          {/* <div style={{ maxWidth: "55ch", marginBottom: "3rem" }}>
             <p style={{ marginBottom: "0.75rem" }}>
               I don't show mockups. I show working software.
             </p>
@@ -29,7 +29,7 @@ export function DemoTools() {
               If you're looking at one and thinking "we need this" — that's
               exactly the conversation I want to have.
             </p>
-          </div>
+          </div> */}
         </ScrollReveal>
 
         {/* Demo cards grid */}
@@ -53,6 +53,12 @@ export function DemoTools() {
                       tool.kubros.in/{tool.id}
                     </span>
                   </div>
+                 {
+                  tool.previewImage ? (
+                    <img src={tool.previewImage} alt={tool.title} className="demo-preview" />
+                  ) : (
+                    <>
+                       
 
                   {/* Preview area with CSS wireframe pattern */}
                   <div className="demo-preview">
@@ -130,6 +136,9 @@ export function DemoTools() {
                       />
                     </div>
                   </div>
+                    </>
+                  )
+                 }
 
                   {/* Body */}
                   <div className="demo-body">
@@ -176,7 +185,9 @@ export function DemoTools() {
                       {isLive && (
                         <>
                           <span className="demo-live-badge">Live</span>
-                          <a
+                          {
+                            tool.demoUrl ? (
+                              <a
                             href={tool.demoUrl}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -185,6 +196,10 @@ export function DemoTools() {
                           >
                             Try it Live
                           </a>
+                            ) : (
+                              <Tag variant="warning">Demo not available</Tag>
+                            )
+                          }
                         </>
                       )}
                       {isComingSoon && (

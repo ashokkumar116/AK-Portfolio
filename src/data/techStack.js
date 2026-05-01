@@ -6,7 +6,7 @@
 export const techStack = [
   {
     category: "Frontend",
-    items: ["React", "Tailwind CSS", "GSAP", "Framer Motion"],
+    items: ["React", "Tailwind CSS", "GSAP", "Framer Motion", "TypeScript"],
   },
   {
     category: "Backend",
@@ -23,6 +23,12 @@ export const techStack = [
   {
     category: "Integrations",
     items: ["Claude API", "Meta Ads API", "Google Analytics API", "Razorpay"],
+  },
+  {
+    category: "App Development",
+    items: ["React Native", "Expo", "NativeWind"],
+    /** Set muted: true to render these chips in the .stack-chip-exploring style */
+    muted: false,
   },
   {
     category: "Currently Exploring",

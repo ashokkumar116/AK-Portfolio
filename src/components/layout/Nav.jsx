@@ -4,11 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { personal } from "../../data/personal";
 
 const NAV_ITEMS = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#hero" },
   { label: "Services", href: "/#services" },
+  { label: "Demos", href: "/#demos" },
   { label: "Process", href: "/#process" },
   { label: "About", href: "/#about" },
-  { label: "FAQ", href: "/#faq" },
+  // { label: "FAQ", href: "/#faq" },
 ];
 
 export function Nav() {
@@ -22,7 +23,7 @@ export function Nav() {
   useEffect(() => {
     if (pathname !== "/") return;
 
-    const sectionIds = ["hero", "services", "process", "about", "faq"];
+    const sectionIds = ["hero", "services", "demos", "process", "about"];
     const observers = [];
 
     sectionIds.forEach((id) => {

@@ -7,6 +7,7 @@ import { TechStack } from "../components/sections/TechStack";
 import { About } from "../components/sections/About";
 import { FAQ } from "../components/sections/FAQ";
 import { CTA } from "../components/sections/CTA";
+import { DemoTools } from "../components/sections/DemoTools";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Positioning />
       <Problem />
       <Services />
+      <DemoTools />
       <Process />
       <TechStack />
       <About />
