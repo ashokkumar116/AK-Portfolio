@@ -29,7 +29,7 @@ export const personal = {
   /** CTA text and link for the primary hero button */
   heroCTA: {
     primary: { label: "Book a Free Audit", href: "/book-audit" },
-    secondary: { label: "See What I Build", href: "/#services" },
+    secondary: { label: "See my Works", href: "/#demos" },
   },
 
   /** Social links — set href to null to hide */
