@@ -8,7 +8,7 @@ export const services = [
     id: "digital-presence",
     tier: "Tier 1",
     name: "Digital Presence",
-    priceRange: "₹10,000 – ₹22,000",
+    priceRange: "₹5,000 – ₹22,000",
     priceNote: "one-time",
     tagline: "Fast, clean, conversion-focused website.",
     deliveryTime: "10–14 days",

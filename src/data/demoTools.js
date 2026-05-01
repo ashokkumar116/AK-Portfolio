@@ -17,7 +17,7 @@ export const demoTools = [
     stack: ["React", "Tailwind CSS", "Node.js", "Express.js", "MongoDB"],
     status: "live",
     demoUrl: "https://groundzeroapp.netlify.app/",
-    githubUrl: "https://github.com/ashokkumar116/GroundZero",
+    githubUrl: "https://github.com/ashokkumar116/GroundZero-A-Community-Reporting-Platform",
     previewImage: "https://ashokkumar-p.netlify.app/assets/groundzero-C_p_engk.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/groundzero-C_p_engk.png",
@@ -50,7 +50,7 @@ export const demoTools = [
     stack: ["React", "Tailwind CSS", "Node.js", "Express.js", "MySQL"],
     status: "live",
     demoUrl: "https://quenzy.netlify.app/",
-    githubUrl: "https://github.com/ashokkumar116/Quenzy",
+    githubUrl: "https://github.com/ashokkumar116/Quenzy---Ecommerce-Website",
     previewImage: "https://ashokkumar-p.netlify.app/assets/Quenzy-Fia38LZU.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/Quenzy-Fia38LZU.png",
@@ -83,7 +83,7 @@ export const demoTools = [
     stack: ["React", "Tailwind CSS", "Node.js", "Express.js", "MySQL"],
     status: "live",
     demoUrl: "https://taskpilot-by-ashok-kumar-p.netlify.app",
-    githubUrl: "https://github.com/ashokkumar116/TaskPilot",
+    githubUrl: "https://github.com/ashokkumar116/employee_task_management_system",
     previewImage: "https://ashokkumar-p.netlify.app/assets/TaskPilot-DCC86i85.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/TaskPilot-DCC86i85.png",
@@ -115,7 +115,7 @@ export const demoTools = [
     stack: ["React Native", "Nativewind", "TypeScript", "Appwrite", "Expo"],
     status: "live",
     demoUrl: null,
-    githubUrl: "https://github.com/ashokkumar116/MovieFlix",
+    githubUrl: "https://github.com/ashokkumar116/mobile_movie_app",
     previewImage: "https://ashokkumar-p.netlify.app/assets/movieflix-DQNeW8Mc.png",
     images: [
       "https://ashokkumar-p.netlify.app/assets/movieflix-DQNeW8Mc.png"
